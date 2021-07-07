@@ -1,0 +1,291 @@
+body {
+  background-color: rgb(250, 250, 250);
+  font-family:"Hiragino Kaku Gothic ProN";
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(250, 250, 250);
+  z-index: 10;
+}
+
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.pc_nav {
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+#toggle {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 30;
+}
+
+.menu {
+  background-color: rgba(66, 65, 65, 0.459);
+  position: fixed;
+  height: 0%;
+  opacity: 0;
+  z-index: 20;
+}
+
+.menu.open {
+  background-color: rgba(66, 65, 65, 0.459);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  opacity: 1;
+}
+
+.menu_list {
+  transform:translateX(-100%);
+  transition: all .3s;
+}
+
+.menu_list.open {
+  width: 300px;
+  height: 100%;
+  background-color: #121212;
+  color: rgb(250, 250, 250);
+  transform:translateX(0);
+}
+
+.link {
+  margin: 0 25px;
+  padding: 60px 0;
+}
+
+.social {
+  margin: 0 25px;
+  padding: 30px 0;
+}
+
+.link li {
+  border-bottom: solid 1px rgb(250, 250, 250);
+  padding: 20px 0;
+}
+
+.link li:first-child {
+  border-top: solid 1px rgb(250, 250, 250) ;
+}
+
+.social li {
+  padding-bottom: 16px;
+  font-size: 14px;
+}
+
+
+
+.link{
+  flex-direction: column;
+}
+
+.pc_nav span {
+  background-color: #333;
+  height: 2px;
+  width: 30px;
+  display: block;
+}
+.top {
+  transition: all .3s;
+}
+
+.center {
+  position:relative;
+  top: 9px;
+}
+
+.bottom {
+  position: relative;
+  top: 18px;
+  transition: all .3s;
+}
+
+.top.open {
+  background-color: rgb(250, 250, 250);
+  transform: scale(1.1) translateY(10px) rotate(315deg);
+}
+
+.center.open {
+  opacity: 0;
+}
+
+.bottom.open {
+  background-color: rgb(250, 250, 250);
+  transform: scale(1.1) translateY(-10px) rotate(-315deg);
+}
+
+video {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  object-position: 100% 100%;
+  margin-bottom: 100px;
+  margin-top: 80px;
+}
+
+.slider img {
+  max-width: 100%;
+  height: auto;
+  padding: 0 30px;
+  margin-bottom: 100px;
+}
+
+h2 {
+  font-family:"Hiragino Kaku Gothic ProN";
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  line-height: 61px;
+  margin-bottom: 30px;
+}
+
+.site_logo_link {
+  display: block;
+  cursor:pointer;
+}
+
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 60px 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.right {
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+  color: #121212;
+  line-height: 20px;
+}
+
+.item {
+  box-shadow: rgb(172, 172, 172) 0 0 8px 4px;
+}
+
+.feature_content {
+  padding: 16px;
+}
+
+
+
+.feature_content p:first-child {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 17px;
+}
+
+.feature_content p:nth-child(2) {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 17px;
+}
+
+.effect-fade {
+  opacity : 0;
+  transform : translate(0, 20px);
+  transition : all 1s;
+}
+
+.effect-fade.effect-scroll {
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+.contact {
+  background-color:#121212;
+  padding: 60px 0;
+}
+
+.contact h2 {
+  color:rgb(250, 250, 250);
+}
+
+.contact_container {
+  display: flex;
+  width: 100%;
+  padding: 0 16px;
+  justify-content: space-between;
+}
+
+.contact_info {
+  width: 45%;
+}
+
+.contact_info p {
+  padding-bottom: 50px;
+  color:rgb(250, 250, 250);
+  font-size: 14px;
+}
+
+.contact_form {
+  width: 45%;
+  position: relative;
+  z-index: 10;
+}
+
+.contact_form label{
+  color:rgb(250, 250, 250);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.contact_container .contact_form dd input , .contact_container .contact_form dd textarea {
+  background-color:rgb(250, 250, 250);
+  width: 100%;
+  padding: 10px 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+
+.button input{
+  width: 200px;
+  color: rgb(250, 250, 250);
+  background-color: #121212;
+  border: solid 1px rgb(250, 250, 250);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer {
+  background-color: #121212;
+  color: rgb(250, 250, 250);
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (max-width:680px) {
+  .contact_container {
+    display: block;
+  }
+
+  .contact_info , .contact_form , .button input {
+    width: 100%;
+  }
+
+
+
+}
